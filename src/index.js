@@ -15,3 +15,17 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// function tick() { 
+//   const element = (
+//     <div>
+//       <h2>hello</h2>
+//       <h2>Now: {new Date().toLocaleDateString()}</h2>
+//     </div>
+//   );
+//   root.render(element);
+
+// }
+
+// setInterval(tick, 1000);

@@ -1,15 +1,12 @@
-import React from "react";
+import React, {useState} from 'react';
 
-const Listitem = props => { 
-	const value = props.value;
-	return <li>{value}</li>
-}
+export function FclickCounter() { 
+	const [count, setCount] = useState(0);
 
-export const List = ({ items }) => { 
-	
 	return (
-		<ul>
-			{items.map(item => <Listitem key={item.toString()} value = {item}/>)}
-		</ul>
+		<div>
+			<p>{count}</p>
+			<button onClick = {() => setCount(count + 1)}>More</button>
+		</div>
 	);
 }

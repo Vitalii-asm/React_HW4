@@ -1,10 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-// import { Clock } from Clock.js
-// import { Clock } from './components/Clock';
-import { FclickCounter } from '.components/FclickCounter';
-import { List } from '.components/List';
+import { List } from './components/List';
+import { FclickCounter } from './components/FclickCounter';
 import React from 'react';
+import { Clock } from './components/Clock';
 
 class App extends React.Component { 
   constructor(props) { 
@@ -13,7 +12,7 @@ class App extends React.Component {
       numbers: [10, 15, 20, 25]
     }
   }
-  return() {
+  render() {
     return (
       <div className="App">
         <header className="App-header">
@@ -21,7 +20,8 @@ class App extends React.Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-  
+
+          <Clock />
           <FclickCounter />
           
           <List items={this.state.numbers}/>
@@ -37,9 +37,6 @@ class App extends React.Component {
       </div>
     );
   }
-  
-  
-  
 }
 
 export default App;

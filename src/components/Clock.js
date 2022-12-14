@@ -1,6 +1,6 @@
 import React from 'react';
 
-export class Clock extends React.Component() { 
+export class Clock extends React.Component	 { 
 	constructor(props){ 
 		super(props);
 		this.state = {
@@ -9,7 +9,6 @@ export class Clock extends React.Component() {
 	}
 	componentDidMount() {
 		this.timerID = setInterval(() => this.tick(), 1000);
-		alert("show Msg");
 	}
 	componentWillUnmount () { 
 		clearInterval(this.timerID);
@@ -22,14 +21,9 @@ export class Clock extends React.Component() {
 		return (
 			<div>
 				<h2>Hello</h2>
-				<h2>Now: { this.state.date.toLocaleDateString()}</h2>
+				<h2>Now: { this.state.date.toLocaleTimeString()}</h2>
 			</div>
 		);
 	}
 }
-
-// ReactDOM.render(
-// 	<Clock />,
-// 	document.getElementById('root');
-// )
 
